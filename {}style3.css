@@ -1,0 +1,538 @@
+html {scroll-behavior: smooth;
+}
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+    margin:0;
+font-family: "Pretendard",sans-serif;
+
+
+background-color: #000000;
+color:#ffffff;
+}
+
+.header {
+ width:100%;
+ min-width:960px;
+position:fixed;
+ top:0;
+
+
+ z-index:100;
+}
+
+.header_inner{
+width:100%;
+
+margin:0 auto;
+padding:24px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items: center;
+}
+
+.header_right{
+    display:flex;
+    gap:48px;
+    align-items:center;
+}
+
+/*메뉴 목록*/
+.nav_list{
+   list-style:none;
+    margin:0;
+    padding:0;
+
+    display:flex;
+    align-items:center;
+    gap:48px;
+
+    list-style:none;
+
+}
+
+/*메뉴 링크*/
+
+.nav a{
+    color:#FFF;
+    text-decoration: none;
+
+    font-family:"Anton", sans-serif;
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:1px;
+
+    transition:color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a:hover{
+    color:#baff00;
+}
+
+.btn_contact{
+    padding:16px 36px;
+
+    border:2px solid #fff;
+    border-radius:999px;
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition: background-color 0.3s ease;
+}
+
+.btn_contact:hover{
+    background-color:#fff;
+    color:#000000
+}
+.hero{
+     min-width: 960px;
+     min-height: 100vh;
+
+     padding: 80px 20px 40px;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/*Hero 키링 이미지*/
+
+.hero_img{
+     width:clamp(580px, 50vw, 860px);
+     height: auto;
+
+     object-fit: contain;
+}
+
+/* About */
+
+.about{
+    padding: 180px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*소개문장*/
+
+.about_text{
+    max-width:1100px;
+
+    text-align: center;
+}
+
+.about_text p {
+    margin: 0 0 12px;
+
+    color:#ffffff;
+
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+
+    word-break: keep-all;
+}
+
+.about_text p {
+    margin: 0;
+}
+
+.about_text strong {
+     font-weight: 700;
+}
+
+/*수치 영역*/
+
+.about_stats{
+    width: 100%;
+    max-width: 1200px;
+
+    margin-top: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 각각 수치 항목*/
+
+.about_stat {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*SINCE와 PROJECT*/
+
+.about_label {
+    margin-bottom: 20px;
+
+    color:rgba(255, 255, 255 0.24);
+
+    font-family:"Anton", sans-serif;
+    font-size: 24px;
+    line-height: 1;
+}
+
+/*2001과    1000+ */
+.about_number{
+    margin: 0;
+
+    color:#ffffff;
+
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/*중앙 세로선*/
+
+.about_divider {
+ width: 1px;
+ height: 128px;
+
+ background-color: rgba(255, 255,255,0.2);
+}
+
+/*수치영역*/
+
+.about_ststs{
+    width: 100%;
+    max-width: 1200px;
+
+    margin-top: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*각각의 수치 항목*/
+
+.about_stat{
+     flex: 1;
+
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+}
+/* --------------------------------
+   임시 영역
+-------------------------------- */
+
+.placeholder-section {
+  min-height: 70vh;
+
+  padding: 160px 20px;
+
+  text-align: center;
+}
+ 
+.placeholder-section p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 18px;
+}
+
+/*Project---------------------------*/
+.projects{
+    padding: 180px 40px;
+}
+
+.projects_heading{
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.projects_heading h2{
+    margin: 0;
+   
+    font-family: "Anton", sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.projects_heading p {
+    margin: 20px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size:18px;
+}
+
+
+/*프로젝트 목록*/
+
+.project_list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+/*위 아래 여백 0, 좌우 여백은 자동으로 계산해서 화면 가운데 배치할 수 있도록 auto 설정*/
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/*각각 프로젝트 카드*/
+.project_card {
+    min-height: 360px;
+    display: flex;
+    overflow: hidden;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+}
+
+/*프로젝트 설명*/
+
+.project_content {
+    width: 50%;
+    padding: 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project_content h3 {
+     margin: 0 0 24px;
+     font-size: 30px;
+     font-weight: 700;
+}
+
+.project_content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255 0.7);
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+/*기술 태그 부제목*/
+
+.project_subtitles{
+    margin-top: 40px;
+}
+
+.project_subtitles h4{
+    margin: 0 0 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    }
+
+/*기술 태그*/
+
+.project_tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+    .project_tags span{
+        padding: 7px 14px;
+        background-color:#3a3a3a;
+        border-radius: 999px;
+
+        color:#fff;
+        font-size: 12px;
+    }
+
+    /*프로젝트 이미지*/
+
+    .project_image{
+        width:50%;
+        overflow:hidden;
+    }
+    
+    .project_image img{
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+/*projects sticker---------------*/
+.contact{
+ position:relative;
+ /*스티커를 Contact 영역을 기준으로 배치하기 위해 설정 */
+
+ min-height: 720px;
+
+ padding: 180px 20px;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+ text-align: center;
+}
+
+.contact h2{
+ margin: 0;
+
+ font-family: "Anton", sans-serif;
+ font-size: 64px;
+ font-weight: 400;
+ line-height: 1.1;
+}
+
+.contact p{
+ margin: 32px 0.0;
+ color: rgba(255, 255, 255, 0.7);
+ font-size: 16px;
+ line-height: 1.7;
+ }
+
+.btn_portfolio{
+ margin-top: 48px;
+ 
+ padding: 18px 36px;
+ 
+ border: 2px solid #fff;
+ border-radius: 999px;
+
+ color: #fff;
+ 
+ font-family: "Anton", sans-serif;
+ font-size: 18px;
+ text-decoration: none;
+
+ transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.btn_portfolio:hover{
+    background: #fff;
+    color: #000000;
+}
+
+
+/*장식용 스티커*/
+
+.contact_sticker{
+    position: absolute;
+/*피그마의 lgnore auto layout 또는 Absolute position과 유사함*/
+width: 110px;
+height: auto;
+}
+
+.contact_sticker_blue{
+ left: 18%;
+ bottom: 100px;
+}
+
+.contact_sticker_red{
+ right: 18%;
+ top: 100px;
+}
+
+/*footer-----------------*/
+.footer{
+    padding: 56px 40px 24px;
+
+    background-color: #baff00;
+    color:#000000;
+}
+
+.footer_info{
+    text-align:left;
+    color: #000000;
+}
+
+
+.footer_info h2{
+    margin: 0 0 20px;
+    font-size: 20px;
+    color:#000000;
+   
+}
+
+.footer_info p{
+    color:#000000;
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+.footer_line{
+    width: 100%;
+    height: 1px;
+
+    margin: 48px 0 32px;
+
+    background-color: rgba(0,0,0,0.4);
+}
+
+.footer_bottom{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    color:#000000;
+
+
+
+}
+
+.footer_bottom p{
+    margin: 0;
+    font-size: 12px;
+}
+
+.footer_tags{
+     display: flex;
+     gap: 8px;
+}
+ 
+.footer_tags span{
+    padding: 8px 14px;
+    background-color: #000000;
+    color:#ffffff;
+
+    font-size:11px;
+    border-radius:999px;
+}
+
+.footer_logo{
+display: block;
+
+width: 100%;
+height: auto;
+
+margin-top: 24px;
+}
+/* 대형 INCOMS 로고 스타일 */
+.footer_logo_text {
+    font-size: 14vw;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    color: #000000;
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 로고 중간의 지구본 아이콘 크기 및 정렬 */
+.footer_globe {
+    height: 0.8em;
+    vertical-align: middle;
+    margin: 0 -0.05em;
+    color: #000000;
+
+}
